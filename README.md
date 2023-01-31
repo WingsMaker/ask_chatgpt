@@ -1,5 +1,5 @@
 # ask_chatgpt
-Excel function using ChatGPT with a prompt as parameter
+Want to have a Excel function to work like ChatGPT ?
 
 ![image](https://user-images.githubusercontent.com/32192638/215730349-212487e0-1a4e-4c3f-8e24-97e6ab3953de.png)
 
