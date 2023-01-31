@@ -1,0 +1,33 @@
+Option Explicit
+Const api_key = "fill in your chatgpt api key here"
+
+Sub test_chatgpt()
+    Dim resp As String
+    resp = Ask_ChatGPT("Explain chatgpt to a 8 years old kid.")
+    Debug.Print resp
+End Sub
+
+Function Ask_ChatGPT(question As String)
+    Dim objHTTP As Object
+    Dim url As String
+    Dim payload As String
+    Dim response As String
+    Dim n1 As Integer
+    Dim n2 As Integer
+    url = "https://api.openai.com/v1/completions"
+    payload = "{""prompt"":""{prompt}"",""model"":""text-davinci-003"",""max_tokens"":2048}"
+    payload = Replace(payload, "{prompt}", question)
+    Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
+    objHTTP.Open "POST", url, False
+    objHTTP.setRequestHeader "Content-Type", "application/json"
+    objHTTP.setRequestHeader "Authorization", "Bearer " & api_key
+    objHTTP.send payload
+    response = objHTTP.ResponseText
+    n1 = InStr(response, "choices") + 23
+    n2 = InStr(response, "]")
+    response = Mid(response, n1, n2 - n1)
+    n1 = InStr(response, Chr(34))
+    response = Left(response, n1 - 1)
+    Ask_ChatGPT = Replace(response, "\n", vbCrLf)
+End Function
+
