@@ -24,4 +24,9 @@ How to add this macro :
 
 ![image](https://user-images.githubusercontent.com/32192638/215748192-3f8cf900-434b-4f18-bd6a-353100f88827.png)
 
-Does it works ? Congrats !!
+Does it works ? It should look like this :
+
+![image](https://user-images.githubusercontent.com/32192638/215748842-c8cb732d-6c7e-4712-b9d9-76b858a79177.png)
+
+
+Congrats !!
