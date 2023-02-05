@@ -1,5 +1,6 @@
 Option Explicit
-Const api_key = "fill in your chatgpt api key here"
+' fill in your actual chatgpt api key here, refers to https://platform.openai.com/account/api-keys
+Const api_key = "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"    
 
 Sub test_chatgpt()
     Dim resp As String
